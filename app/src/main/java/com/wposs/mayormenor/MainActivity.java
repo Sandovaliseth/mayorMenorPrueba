@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 listaNumeros.add(Integer.parseInt(numeros.getText().toString()));
                 limpiar();
                 ArrayList<Integer> mostrar = presenter.ordenar(listaNumeros);
-                ordenado.setText(mostrar.toString());
+                //ordenado.setText(mostrar.toString());
+                String [] espacios = mostrar.toString().split(" ");
+                ordenado.setText(espacios[0]);
                 break;
         }
     }
