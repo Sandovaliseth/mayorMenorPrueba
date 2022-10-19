@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ArrayList<Integer> mostrar = presenter.ordenar(listaNumeros);
                 //ordenado.setText(mostrar.toString());
                 String [] espacios = mostrar.toString().split(" ");
-                ordenado.setText(espacios[0]);
+                String comas = mostrar.toString().replace(",","");
+                ordenado.setText(comas);
                 break;
         }
     }
